@@ -7,7 +7,6 @@
 	<link href="style.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width,initial-scale=1"/>
 	<meta name="theme-color" content="#000000"/>
-	<meta name="description" content="Welcome to Dogeland! Created by IKL"/><link rel="apple-touch-icon" href="/Personal_page/Doge-icon.png"/>
 	<style>	
 		@font-face{
 			font-family:'ZCOOL KuaiLe';
@@ -39,7 +38,7 @@
 
 		nav a {
 			color: white;
-			dispaly: block;
+			display: block;
 			padding: 1em 2em;
 			text-decoration: none;
 		}
@@ -74,6 +73,30 @@
 			opacity: 1;
 			filter: grayscale(0);
 		}
+		
+		body {
+			position: relative;
+		}
+		
+		.name {
+			position: absolute;
+			width: 100%;
+			text-align: center;
+			font-size: 1.5em;
+			background-color: rgb(244 96 73);
+			color: white;
+			padding: 1em 0;
+			top: 15%;
+			left: 0;
+		}
+		
+		img + .name {
+			display: none;
+		}
+		
+		img:hover + .name {
+			display: block;
+		}
 	</style>
 	<title>613宿舍</title>
 </head>
@@ -83,19 +106,35 @@
 		<h1>Welcome to 613 room</h1>
 		<a href="https://anycoffeemilk.github.io/class_page">回到2310班↳</a>
 	</nav>
+	
+	<div class="name">
+		请选择你的室友
+	</div>
 
 	<main>
 		<a href="https://liu6jb.github.io/smz668_html/">
 			<img src="image/2.png" alt="">
+			<div class="name">
+				孙茂祯
+			</div>
 		</a>
 		<a href="https://liu6jb.github.io/html_homework/">
 			<img src="image/1.png" alt="">
+			<div class="name">
+				刘建博
+			</div>
 		</a>
 		<a href="https://anycoffeemilk.github.io/personal_page/">
 			<img src="image/3.png" alt="">
+			<div class="name">
+				尤启乐
+			</div>
 		</a>
-		<a class="hidden">
+		<a class="hidden" onclick="alert('我们宿舍只有3个人')">
 			<img src="image/4.png" alt="">
+			<div class="name">
+				不存在的第四人
+			</div>
 		</a>
 	</main>
 </body>
